@@ -1,0 +1,92 @@
+# appium.yamlLoginPage:
+---
+appium_port:
+  -
+    4723
+  -
+    4740
+LoginPage:
+  dec: 登录
+  locators:
+    -
+      #用户名
+      userName:
+        type: id
+        value: com.tal.kaoyan:id/login_email_edittext
+    -
+      #用户密码
+      passWord:
+        type: id
+        value: com.tal.kaoyan:id/login_password_edittext
+    -
+      #登录按钮
+      login_btn:
+        type: id
+        value: com.tal.kaoyan:id/login_login_btn
+    -
+      #注册
+      register:
+        type: id
+        value: com.tal.kaoyan:id/login_register_text
+    -
+
+      forgeetPassword:
+        type: id
+        value: com.tal.kaoyan:id/login_findpassword_img
+
+
+InitPage:
+  dec: 初始页面
+  locators:
+    -
+      #版本更新提示
+      newVersion:
+        type: id
+        value: android:id/alertTitle
+    - #版本更新内容
+      versionContent:
+        type: id
+        value: android:id/message
+    - #取消更新
+      versionCancle:
+        type: id
+        value: android:id/button2
+    - #确认更新
+      versionAccept:
+        type: id
+        value: android:id/button1
+    - #跳过按钮
+      skipbtn:
+        type: id
+        value: com.tal.kaoyan:id/tv_skip
+
+MainPage:
+  dec: 主页面
+  locators:
+    -
+      #我
+      myself:
+        type: id
+        value: com.tal.kaoyan:id/mainactivity_button_mysefl
+
+alert:
+  dec: 通知
+  locators:
+    -
+      #下线通知检测头
+      ontherLogin:
+        type: id
+        value: com.tal.kaoyan:id/tip_title
+    - #下线通知检测内容
+      ontherLoginContent:
+        type: id
+        value: com.tal.kaoyan:id/tip_message
+    - #下线通知检测确认
+      ontherLoginbtn:
+        type: id
+        value: com.tal.kaoyan:id/tip_commit
+    - #我知道了
+      know:
+        type: xpath
+        value: //*[@resource-id="android:id/list"]/android.widget.LinearLayout[1]/android.view.View[1]
+...
